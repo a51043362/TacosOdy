@@ -1,0 +1,244 @@
+
+/* TIPOGRAFÍAS */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/* COLORES DE TACOS ODY */
+:root {
+    --rojo: #D62828;
+    --naranja: #F7931E;
+    --amarillo: #F4C430;
+    --crema: #F8F1E7;
+}
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--crema);
+    color: #3D2923;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: var(--rojo);
+    color: var(--crema);
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+header p {
+    font-weight: 600;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+nav {
+    background-color: var(--naranja);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 17px;
+}
+
+nav a {
+    font-family: 'Fredoka', sans-serif;
+    color: #3D2923;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 9px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--amarillo);
+    color: var(--rojo);
+}
+
+/* PORTADA PRINCIPAL */
+.principal {
+    background:
+    linear-gradient(rgba(40,15,10,0.45),
+    rgba(40,15,10,0.45)),
+    url("https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=1200");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.principal h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.principal p {
+    font-size: 18px;
+    margin: 12px;
+    line-height: 1.6;
+}
+
+/* BOTONES */
+.boton {
+    display: inline-block;
+    background-color: var(--amarillo);
+    color: var(--rojo);
+    padding: 14px 25px;
+    margin-top: 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--naranja);
+    transform: scale(1.05);
+}
+
+/* CONTENIDO */
+.contenido {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contenido h2 {
+    color: var(--rojo);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contenido h3 {
+    color: var(--rojo);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 23px;
+    margin: 20px 0 10px;
+}
+
+.contenido p {
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+/* IMÁGENES */
+.contenido img {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 15px;
+    margin: 20px auto;
+}
+
+/* PRODUCTOS */
+.producto {
+    background-color: var(--crema);
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 15px;
+    border-left: 7px solid var(--naranja);
+    transition: 0.3s;
+}
+
+.producto:hover {
+    border-left-color: var(--rojo);
+    transform: translateY(-3px);
+}
+
+.producto h3 {
+    color: var(--rojo);
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* FORMULARIO */
+form {
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid var(--naranja);
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--crema);
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button {
+    background-color: var(--rojo);
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--naranja);
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: var(--rojo);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 34px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .principal {
+        padding: 80px 15px;
+    }
+
+    .principal h2 {
+        font-size: 30px;
+    }
+
+    .contenido {
+        margin: 15px;
+        padding: 20px;
+    }
+}
